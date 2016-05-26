@@ -3,6 +3,11 @@
 
 sudo: required
 
+addons: 
+   artifacts: 
+   paths:
+     - $HOME/
+
 language: groovy
 
 install: gradle check
