@@ -14,10 +14,10 @@ services:
 before_install:
    - docker pull centos:7
    
-install: gradle check
+install: gradle clean check
 
 script: 
-- gradle  clean assemble build
+- gradle assemble build
 
 after_success:
   - docker --version 
