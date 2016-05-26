@@ -15,11 +15,10 @@ services:
 
 before_install:
    - docker pull centos:7
-   - docker build -t elakkad/dockertest .
-#   - docker run -itd elakkad/dockertest:latest /bin/bash
 
 after_success:
   - docker --version 
+  - docker build -t elakkad/dockertest .
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push elakkad/dockertest:latest
 
