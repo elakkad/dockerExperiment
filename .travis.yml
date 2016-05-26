@@ -3,9 +3,9 @@
 
 sudo: required
 
-language: java
+language: groovy
 
-install: true
+install: gradle assemble
 
 jdk:
   - oraclejdk8
@@ -15,9 +15,8 @@ services:
 
 before_install:
    - docker pull centos:7
+   - docker build -t elakkad/dockertest .
 #   - docker run -itd elakkad/dockertest:latest /bin/bash
-
-script: docker build -t elakkad/dockertest .
 
 env:
    global:
