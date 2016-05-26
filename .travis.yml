@@ -20,6 +20,7 @@ before_install:
 
 after_success:
   - docker --version 
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push elakkad/dockertest:latest
 
 env:
