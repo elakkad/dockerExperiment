@@ -3,22 +3,21 @@
 
 sudo: required
 
-
-language: groovy
-
-install: gradle check
-
 jdk:
   - oraclejdk8
+
+language: groovy
 
 services:
   - docker
 
-script: 
-- gradle  clean assemble build
-
 before_install:
    - docker pull centos:7
+   
+install: gradle check
+
+script: 
+- gradle  clean assemble build
 
 after_success:
   - docker --version 
