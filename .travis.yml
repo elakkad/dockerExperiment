@@ -3,7 +3,7 @@
 
 sudo: required
 
-#language: java
+language: java
 
 install: true
 
