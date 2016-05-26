@@ -5,6 +5,8 @@ sudo: required
 
 #language: java
 
+install: true
+
 jdk:
   - oraclejdk8
 
