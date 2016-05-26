@@ -14,7 +14,7 @@ services:
   - docker
 
 script: 
-- gradle  assemble build
+- gradle  clean assemble build
 
 before_install:
    - docker pull centos:7
