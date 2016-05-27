@@ -1,5 +1,6 @@
 # http://travis-encrypt.github.io/
 # http://lint.travis-ci.org/
+# api_key:  token@git@github.com:elakkad/dockerExperiment.git
 
 sudo: required
 
