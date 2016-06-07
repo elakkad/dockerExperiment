@@ -41,16 +41,16 @@ after_success:
 # checking if bintray deployment deploys to opensource artifactory
 deploy:
   provider: bintray
-  file: "descriptor.json"
-  user: "$ARTIFACTORY_USER"
   key: "se1xaW7bfQMH4UGfHu3WRwfaEGGIOCD3AnQ2wdA4crBiA6kuUHLdGOvlx0aSlhMkGOBwMT0sx1vrRZdN6V5IOVydHSqIYGLC3muk1Cncx3QFLhIoDdU53+ZNixqQ1XIx5j/tKmeuqcRhH2LSJeyara2VAPxbL7RhWhuWghGNJ6gDyzhvYHmb9A5UtWzQV2mXkP341swpFL995NEWQRNAEVeEjPptq31E9NzO/2oTloip264/zD+FyLr61I7ciKaaiIYy4VHiEYVLOfHCuqmUfYIDWOcrIkgg/P5h0ATOs+cVJ0JBkyxUl/jWbjdrZd+dROl1zVKoAcQ7DrJXegScC6nXi6PHHvQ+dwTh8esfaa25eSw3QmlO4GLfyFqOAi/HSdLIHHDZ9zpx1SPgcEZjoK3McGYV01Gep4GiTf3LQkOsx9b0e5/1+rYum1/Q4ArateuQX4vLl6bn0bDHPOE0txzrLAUzGFm3xR2UHS20gVUFwIAi7j04nAWGTj6fJC2W9Xg45rtIl3LeM4Jjb93KWneLVVOvteacJqRFOvIkKXB9Va25YOo4GpYVDR0hzsKrNNIA6SRQSfUWtn+De+H7g38BBdwrOVWZBZ7VBCk8QWdGAHnoVI0SzHqwy82/4ml/7ae2iXss/rmcOAA1v6wXn6dsnvMDuJjcYLSirHD9EB8="
 #  passphrase: "Optional. In case a passphrase is configured on Bintray and GPG signing is used"
 #  dry-run: "Optional. If true, skips sending requests to Bintray. Useful for testing your configuration"
-    skip_cleanup: true
-    overwrite: true
-    on:
-      repo: dvh-snapshot-repo/icpdev2
-      tags: true
+  file: "descriptor.json"
+  user: "$ARTIFACTORY_USER"
+  skip_cleanup: true
+  overwrite: true
+  on:
+    repo: dvh-snapshot-repo/icpdev2
+    tags: true
       
 env:
    global:
