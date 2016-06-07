@@ -46,7 +46,12 @@ deploy:
   key: "se1xaW7bfQMH4UGfHu3WRwfaEGGIOCD3AnQ2wdA4crBiA6kuUHLdGOvlx0aSlhMkGOBwMT0sx1vrRZdN6V5IOVydHSqIYGLC3muk1Cncx3QFLhIoDdU53+ZNixqQ1XIx5j/tKmeuqcRhH2LSJeyara2VAPxbL7RhWhuWghGNJ6gDyzhvYHmb9A5UtWzQV2mXkP341swpFL995NEWQRNAEVeEjPptq31E9NzO/2oTloip264/zD+FyLr61I7ciKaaiIYy4VHiEYVLOfHCuqmUfYIDWOcrIkgg/P5h0ATOs+cVJ0JBkyxUl/jWbjdrZd+dROl1zVKoAcQ7DrJXegScC6nXi6PHHvQ+dwTh8esfaa25eSw3QmlO4GLfyFqOAi/HSdLIHHDZ9zpx1SPgcEZjoK3McGYV01Gep4GiTf3LQkOsx9b0e5/1+rYum1/Q4ArateuQX4vLl6bn0bDHPOE0txzrLAUzGFm3xR2UHS20gVUFwIAi7j04nAWGTj6fJC2W9Xg45rtIl3LeM4Jjb93KWneLVVOvteacJqRFOvIkKXB9Va25YOo4GpYVDR0hzsKrNNIA6SRQSfUWtn+De+H7g38BBdwrOVWZBZ7VBCk8QWdGAHnoVI0SzHqwy82/4ml/7ae2iXss/rmcOAA1v6wXn6dsnvMDuJjcYLSirHD9EB8="
 #  passphrase: "Optional. In case a passphrase is configured on Bintray and GPG signing is used"
 #  dry-run: "Optional. If true, skips sending requests to Bintray. Useful for testing your configuration"
-
+    skip_cleanup: true
+    overwrite: true
+    on:
+      repo: dvh-snapshot-repo/icpdev2
+      tags: true
+      
 env:
    global:
    - secure: fSUu6LU/2tEkW9G4jftJMILzQv7rg1Kp0O0XPqeCFO3EtDNEJU2OvHRlt3Hs6sa9gLqACdt3zlkfsg9p44viNYtR93rcLMabXaF5mR0EO/NaLpKoa+830rleJl0IKX2OTqL4CY8W7uMLKd07Uwpv3y1rz16dnQsltuRYGaIAjG6/XS20bwCUXa1jEGpgmV1FeIEgR55UerchXeVBhajxluVuyhzJjReC5vR9tutlcMhz9IuUgWE3ktZyHUIs0pi45qjOmMeDf48zGv2GT/Dyxqc8O9JnjHM3vciYcbe5vVKHlmUC47xSpBRhqW5oUoiNYwfSsuprQO0+QXFkUsKQJabdO+6RziR46NaUDW2FLkJXgSDs3xyhFZ27xbjIim1nEOQEIRKVZPNkUiiWsP2r8fMqyBKnEbpFgnINJa+RTjsXEqTZ5uMVIo8rWOAumssvbx8iiot0i5GosdZr3NidzOsk68eoW5QWXzprliKAJdIE8xF8XU5h1k1sgPV3CC+smZxtzcp77FWzmD8DPW63IpyX+r3YE5QH+kfoEhYZhPRxR/nqE5Jcru1zGR9e2+2ukCZK9aldMI14oHuOgvdnBmmYEOsUfFG1G2u78sjZ/b+2k66eQaij8LWWLD0gkIr3mrFVLVbXdjieFYQNUgQsk2hJ6djb5iuNhSIJHIaQdOo=
