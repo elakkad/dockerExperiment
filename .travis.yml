@@ -27,13 +27,13 @@ after_success:
   - docker push elakkad/dockertest:latest
   - curl -v --user "$ARTIFACTORY_USER":"$ARTIFACTORY_PASSWORD" -X PUT http://artifactory.campuscardcenter.com/artifactory/dvh-snapshot-repo/icp-dev/org/jpos/dvh/web/SNAPSHOT/dockerExperiment-SNAPSHOT.jar --data @build/libs/dockerExperiment.jar
 
-deploy:
-  provider: releases
-  api_key: "drDbXKSPn9aKnHR3uVIbwrt++kuhA/y+2H/VfhflOs5KqU5uZV4ps6GyTKogBsOwoHHq8Vw0qr3oF+DKenWzd7xhxy7CY7whSu9Xb89WBexmT7dzyoCJnb6gX9CdHL4gX05at5BSnIPWAKwwPUmLT1yBjANsOmH12Zh1QvaKUicTyzlasLmJUIapHOqUDco0OCkXoawk4j+oPhOyW43YZeLNbBz8bMZ9ws+iZuoWoSoPORQG+izLuSf0zoaqhrqnhCs0J1e5kQt3tw6lKykz+jbM0MyTa2v6KefJWAj23xgOd4ZgBG1cWFJz6pV4whG/IhmASmUao9U8LJb7fc3uYuDFsXU/dxTlLFcTrvmQ/Hs+D9SABakAE18hDAzmcuN6r3Ejydsk3swuEU3ADWlQ2BlfOP/nzhli4dPl3LH/SoZGRLBLM6cX9DdqBIalJAF1HXKzi9Fp/Gc2zJzeaBQZ7m2P06AN1uugDaVSdEzIkDn3BYUWKHNeDO/qcz+wrL67wlurAjTTtNMQRE3tiOaxEyjUnF+eR0gmeTXtsIGPmuY4MkbtYKfTrXBtU4mvR/YANLJkqUqN5zl+2lT9uzW0V2z5oYVFvwggnFPUJ9xTEWId3K/+dmKsBndwxcCw2L3NonqmJ6UaPuol209qcmZTsY1iTcG///lkJ851LHft1OI="
-  file: "build/libs/dockerExperiment.jar"
-  skip_cleanup: true
-  on:
-    tags: true
+#deploy:
+#  provider: releases
+#  api_key: "drDbXKSPn9aKnHR3uVIbwrt++kuhA/y+2H/VfhflOs5KqU5uZV4ps6GyTKogBsOwoHHq8Vw0qr3oF+DKenWzd7xhxy7CY7whSu9Xb89WBexmT7dzyoCJnb6gX9CdHL4gX05at5BSnIPWAKwwPUmLT1yBjANsOmH12Zh1QvaKUicTyzlasLmJUIapHOqUDco0OCkXoawk4j+oPhOyW43YZeLNbBz8bMZ9ws+iZuoWoSoPORQG+izLuSf0zoaqhrqnhCs0J1e5kQt3tw6lKykz+jbM0MyTa2v6KefJWAj23xgOd4ZgBG1cWFJz6pV4whG/IhmASmUao9U8LJb7fc3uYuDFsXU/dxTlLFcTrvmQ/Hs+D9SABakAE18hDAzmcuN6r3Ejydsk3swuEU3ADWlQ2BlfOP/nzhli4dPl3LH/SoZGRLBLM6cX9DdqBIalJAF1HXKzi9Fp/Gc2zJzeaBQZ7m2P06AN1uugDaVSdEzIkDn3BYUWKHNeDO/qcz+wrL67wlurAjTTtNMQRE3tiOaxEyjUnF+eR0gmeTXtsIGPmuY4MkbtYKfTrXBtU4mvR/YANLJkqUqN5zl+2lT9uzW0V2z5oYVFvwggnFPUJ9xTEWId3K/+dmKsBndwxcCw2L3NonqmJ6UaPuol209qcmZTsY1iTcG///lkJ851LHft1OI="
+#  file: "build/libs/dockerExperiment.jar"
+#  skip_cleanup: true
+#  on:
+#    tags: true
     
 
 env:
