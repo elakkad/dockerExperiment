@@ -48,9 +48,9 @@ deploy:
   user: "$ARTIFACTORY_USER"
   skip_cleanup: true
   overwrite: true
-  on:
-    repo: artifactory.campuscardcenter.com/dvh-snapshot-repo
-    tags: true
+#  on:
+#    repo: artifactory.campuscardcenter.com/dvh-snapshot-repo
+#    tags: true
       
 env:
    global:
