@@ -3,7 +3,7 @@
     "package": {
         "name": "dockerExperiment",
         "repo": "dvh-snapshot-repo",
-        "subject": "admin",
+        "subject": "dvh_jenkins_artifactory",
         "desc": "I was pushed completely automatically via travis ci",
         "website_url": "artifactory.campuscardcenter.com",
         "issue_tracker_url": "https://github.com/bintray/bintray-client-java/issues",
