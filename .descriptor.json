@@ -32,8 +32,8 @@
 
     "files":
         [
-        {"includePattern": "build/libs(.*)*/(.*\\.jar)", "excludePattern": ".*/do-not-deploy/.*", "uploadPattern": "jars/$2"},
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "pkgformats/$1"}
+        {"includePattern": "build/libs(.*)*/(.*\\.jar)", "uploadPattern": "icpdev2/jars/$2"},
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "icpdev2/pkgformats/$1"}
         ],
     "publish": true
 }
