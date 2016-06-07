@@ -2,7 +2,7 @@
 {
     "package": {
         "name": "dockerExperiment",
-        "repo": "dockerExperiment",
+        "repo": "dvh-snapshot-repo",
         "subject": "admin",
         "desc": "I was pushed completely automatically via travis ci",
         "website_url": "artifactory.campuscardcenter.com",
