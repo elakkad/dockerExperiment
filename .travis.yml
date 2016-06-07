@@ -48,8 +48,8 @@ deploy:
   user: "$ARTIFACTORY_USER"
   skip_cleanup: true
   overwrite: true
-#  on:
-#    repo: artifactory.campuscardcenter.com/dvh-snapshot-repo
+  on:
+    repo: artifactory.campuscardcenter.com/dvh-snapshot-repo/icpdev2
 #    tags: true
       
 env:
