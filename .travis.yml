@@ -49,7 +49,7 @@ deploy:
   skip_cleanup: true
   overwrite: true
   on:
-    repo: dvh-snapshot-repo/icpdev2
+    repo: dvh-snapshot-repo
     tags: true
       
 env:
