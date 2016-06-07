@@ -25,7 +25,7 @@ after_success:
   - docker build -t elakkad/dockertest:latest .
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push elakkad/dockertest:latest
-  - curl -v --user "$ARTIFACTORY_USER":"$ARTIFACTORY_PASSWORD" -X PUT http://artifactory.campuscardcenter.com/artifactory/dvh-snapshot-repo/icp-dev/org/jpos/dvh/web/SNAPSHOT/dockerExperiment-SNAPSHOT.jar --data @build/libs/dockerExperiment.jar
+  - curl -v --user "$ARTIFACTORY_USER":"$ARTIFACTORY_PASSWORD" -X PUT http://artifactory.campuscardcenter.com/artifactory/dvh-snapshot-repo/icpdev/SNAPSHOT/dockerExperiment-SNAPSHOT.jar --data @build/libs/dockerExperiment.jar
 
 #deploy:
 #  provider: releases
