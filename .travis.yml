@@ -1,6 +1,7 @@
 # http://travis-encrypt.github.io/
 # http://lint.travis-ci.org/
 # api_key:  token@git@github.com:elakkad/dockerExperiment.git
+# https://docs.travis-ci.com/user/deployment/bintray
 
 sudo: required
 
