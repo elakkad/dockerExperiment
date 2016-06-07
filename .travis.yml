@@ -25,8 +25,10 @@ after_success:
   - docker build -t elakkad/dockertest:latest .
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push elakkad/dockertest:latest
-  - curl -v --user "$ARTIFACTORY_USER":"$ARTIFACTORY_PASSWORD" -X PUT http://artifactory.campuscardcenter.com/artifactory/dvh-snapshot-repo/icpdev/SNAPSHOT/dockerExperiment-SNAPSHOT.jar --data @build/libs/dockerExperiment.jar
+  # uploads to artifactory as-expected
+ #  - curl -v --user "$ARTIFACTORY_USER":"$ARTIFACTORY_PASSWORD" -X PUT http://artifactory.campuscardcenter.com/artifactory/dvh-snapshot-repo/icpdev/SNAPSHOT/dockerExperiment-SNAPSHOT.jar --data @build/libs/dockerExperiment.jar
 
+# github - is not working
 #deploy:
 #  provider: releases
 #  api_key: "drDbXKSPn9aKnHR3uVIbwrt++kuhA/y+2H/VfhflOs5KqU5uZV4ps6GyTKogBsOwoHHq8Vw0qr3oF+DKenWzd7xhxy7CY7whSu9Xb89WBexmT7dzyoCJnb6gX9CdHL4gX05at5BSnIPWAKwwPUmLT1yBjANsOmH12Zh1QvaKUicTyzlasLmJUIapHOqUDco0OCkXoawk4j+oPhOyW43YZeLNbBz8bMZ9ws+iZuoWoSoPORQG+izLuSf0zoaqhrqnhCs0J1e5kQt3tw6lKykz+jbM0MyTa2v6KefJWAj23xgOd4ZgBG1cWFJz6pV4whG/IhmASmUao9U8LJb7fc3uYuDFsXU/dxTlLFcTrvmQ/Hs+D9SABakAE18hDAzmcuN6r3Ejydsk3swuEU3ADWlQ2BlfOP/nzhli4dPl3LH/SoZGRLBLM6cX9DdqBIalJAF1HXKzi9Fp/Gc2zJzeaBQZ7m2P06AN1uugDaVSdEzIkDn3BYUWKHNeDO/qcz+wrL67wlurAjTTtNMQRE3tiOaxEyjUnF+eR0gmeTXtsIGPmuY4MkbtYKfTrXBtU4mvR/YANLJkqUqN5zl+2lT9uzW0V2z5oYVFvwggnFPUJ9xTEWId3K/+dmKsBndwxcCw2L3NonqmJ6UaPuol209qcmZTsY1iTcG///lkJ851LHft1OI="
@@ -34,7 +36,15 @@ after_success:
 #  skip_cleanup: true
 #  on:
 #    tags: true
-    
+
+# checking if bintray deployment deploys to opensource artifactory
+deploy:
+  provider: bintray
+  file: "build/libs/dockerExperiment.jar"
+  user: "$ARTIFACTORY_USER"
+  key: "se1xaW7bfQMH4UGfHu3WRwfaEGGIOCD3AnQ2wdA4crBiA6kuUHLdGOvlx0aSlhMkGOBwMT0sx1vrRZdN6V5IOVydHSqIYGLC3muk1Cncx3QFLhIoDdU53+ZNixqQ1XIx5j/tKmeuqcRhH2LSJeyara2VAPxbL7RhWhuWghGNJ6gDyzhvYHmb9A5UtWzQV2mXkP341swpFL995NEWQRNAEVeEjPptq31E9NzO/2oTloip264/zD+FyLr61I7ciKaaiIYy4VHiEYVLOfHCuqmUfYIDWOcrIkgg/P5h0ATOs+cVJ0JBkyxUl/jWbjdrZd+dROl1zVKoAcQ7DrJXegScC6nXi6PHHvQ+dwTh8esfaa25eSw3QmlO4GLfyFqOAi/HSdLIHHDZ9zpx1SPgcEZjoK3McGYV01Gep4GiTf3LQkOsx9b0e5/1+rYum1/Q4ArateuQX4vLl6bn0bDHPOE0txzrLAUzGFm3xR2UHS20gVUFwIAi7j04nAWGTj6fJC2W9Xg45rtIl3LeM4Jjb93KWneLVVOvteacJqRFOvIkKXB9Va25YOo4GpYVDR0hzsKrNNIA6SRQSfUWtn+De+H7g38BBdwrOVWZBZ7VBCk8QWdGAHnoVI0SzHqwy82/4ml/7ae2iXss/rmcOAA1v6wXn6dsnvMDuJjcYLSirHD9EB8="
+#  passphrase: "Optional. In case a passphrase is configured on Bintray and GPG signing is used"
+#  dry-run: "Optional. If true, skips sending requests to Bintray. Useful for testing your configuration"
 
 env:
    global:
