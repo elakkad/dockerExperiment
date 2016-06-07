@@ -1,8 +1,8 @@
 {
     "package": {
-        "name": "auto-upload",
-        "repo": "myRepo",
-        "subject": "myBintrayUser",
+        "name": "dockerExperiment",
+        "repo": "dvh-snapshot-repo",
+        "subject": "blackboard",
         "desc": "I was pushed completely automatically",
         "website_url": "www.jfrog.com",
         "issue_tracker_url": "https://github.com/bintray/bintray-client-java/issues",
@@ -21,7 +21,7 @@
     "version": {
         "name": "0.5",
         "desc": "This is a version",
-        "released": "2015-01-04",
+        "released": "2016-06-07",
         "vcs_tag": "0.5",
         "attributes": [{"name": "VerAtt1", "values" : ["VerVal1"], "type": "string"},
                        {"name": "VerAtt2", "values" : [1, 3.3, 5], "type": "number"},
@@ -31,7 +31,7 @@
 
     "files":
         [
-        {"includePattern": "build/bin(.*)*/(.*\\.gem)", "excludePattern": ".*/do-not-deploy/.*", "uploadPattern": "gems/$2"},
+        {"includePattern": "build/libs/(.*\\.jar)", "excludePattern": ".*/do-not-deploy/.*", "uploadPattern": "icpdev2/$2"},
         {"includePattern": "build/docs/(.*)", "uploadPattern": "docs/$1"}
         ],
     "publish": true
