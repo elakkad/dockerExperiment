@@ -41,15 +41,15 @@ after_success:
 # checking if bintray deployment deploys to opensource artifactory
 deploy:
   provider: bintray
-  key: "se1xaW7bfQMH4UGfHu3WRwfaEGGIOCD3AnQ2wdA4crBiA6kuUHLdGOvlx0aSlhMkGOBwMT0sx1vrRZdN6V5IOVydHSqIYGLC3muk1Cncx3QFLhIoDdU53+ZNixqQ1XIx5j/tKmeuqcRhH2LSJeyara2VAPxbL7RhWhuWghGNJ6gDyzhvYHmb9A5UtWzQV2mXkP341swpFL995NEWQRNAEVeEjPptq31E9NzO/2oTloip264/zD+FyLr61I7ciKaaiIYy4VHiEYVLOfHCuqmUfYIDWOcrIkgg/P5h0ATOs+cVJ0JBkyxUl/jWbjdrZd+dROl1zVKoAcQ7DrJXegScC6nXi6PHHvQ+dwTh8esfaa25eSw3QmlO4GLfyFqOAi/HSdLIHHDZ9zpx1SPgcEZjoK3McGYV01Gep4GiTf3LQkOsx9b0e5/1+rYum1/Q4ArateuQX4vLl6bn0bDHPOE0txzrLAUzGFm3xR2UHS20gVUFwIAi7j04nAWGTj6fJC2W9Xg45rtIl3LeM4Jjb93KWneLVVOvteacJqRFOvIkKXB9Va25YOo4GpYVDR0hzsKrNNIA6SRQSfUWtn+De+H7g38BBdwrOVWZBZ7VBCk8QWdGAHnoVI0SzHqwy82/4ml/7ae2iXss/rmcOAA1v6wXn6dsnvMDuJjcYLSirHD9EB8="
+  key: "bQB/l+VTYJGd4Ix3B5jhuzK3lyN5dBHIxjxAqU6rpi64pV74vrkI4/cpxUtxyIWpaoWm0Knx9IkSbx3ipQ2WnIEQBlyEu0UhgtAfh8Zf88nZFnOP/3s98A+vZ836BuYstdZmnZCQJ3gAtX3evSRgraPG1ah+9yz0b4m/r9ik5QpbDeOGNNqLrjkcf5Z1cpUhZQuQCvPor15zoywOgZP9WL8OPksG9huXg++g6r3rjdAaALk8IemCh24k9Oj0WXItmGENvPsROBnTkf4pzacSTmv9BdNT6vFuDUL/WTO1DkmRq+TtFMC8Cc2C2DAjxJyOIiQxQAUuAnpAvCNqO+rot6V6kN+e23u82QXxr+gCt7ABaRb39ArBN/5c2Jp/6RlCNMXsyG/x3e2Aa4EpUHqtKOEDinK3X2RAeSXXVwMJt1diM/46gNXc+Cos/1wPaGxqHcccsRLcE4MwRs3A0uT2kG+N615uHzF+pf5rjHE4cAsIeFXCvj+I3sz2/8dHTK+01r4W++bpSZ2KSGActaNex9Ti+XJp+TewaeoIyzCaSNy71QeGQIIXfySejKTAqLlj+vHimSbGAh+dHRz0gPhIlYey9G03/W4rl/hMBV1FkKTAPBkc8DzneOHJ4GOJ6s/GxAYtMzcnKLFWhG+27OKJdLbhpZHo4/dvWxoB7M6aD90="
 #  passphrase: "Optional. In case a passphrase is configured on Bintray and GPG signing is used"
 #  dry-run: "Optional. If true, skips sending requests to Bintray. Useful for testing your configuration"
   file: "descriptor.json"
-  user: "$ARTIFACTORY_USER"
+  user: "$BINTRAY_USER"
   skip_cleanup: true
   overwrite: true
   on:
-    repo: artifactory.campuscardcenter.com/dvh-snapshot-repo/icpdev2
+    repo: dockerExperiment/icpdev2
 #    tags: true
       
 env:
