@@ -31,7 +31,7 @@
 
     "files":
         [
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment2/groupId/artifactId/version/$1",
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment4/groupId/artifactId/version/$1",
             "matrixParams": {
         "override": 1 }
         },
