@@ -32,8 +32,8 @@
 
     "files":
         [
-        {"includePattern": "build/libs/dockerExperiment.jar)", "uploadPattern": "dockerExperiment2/icpdev2/jars/$2"},
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment2/icpdev2/pkgformats/$1"}
+        {"includePattern": "build/libs/(.*\\.jar)", "uploadPattern": "groupId/artifactId/version/$2"},
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "groupId/artifactId/pkg/$1"}
         ],
     "publish": true
 }
