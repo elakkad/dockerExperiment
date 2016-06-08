@@ -49,7 +49,7 @@ deploy:
   skip_cleanup: true
   overwrite: true
   on:
-    repo: dockerExperiment/icpdev2
+    repo: dockerExperiment
     tags: true
 
 # checking if bintray deployment deploys to opensource artifactory
