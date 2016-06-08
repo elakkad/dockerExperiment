@@ -4,7 +4,7 @@
         "name": "dockerExperiment2",
         "repo": "dockerExperiment2",
         "subject": "ahlam",
-        "desc": "I was pushed completely automatically from travis ci travis-ci",
+        "desc": "I was pushed completely automatically from travis ci",
         "website_url": "bintray.com",
         "issue_tracker_url": "https://github.com/bintray/bintray-client-java/issues",
         "vcs_url": "https://github.com/bintray/bintray-client-java.git",
@@ -32,8 +32,8 @@
 
     "files":
         [
-        {"includePattern": "build/libs/(.*\\.jar)", "uploadPattern": "dockerExperiment2/icpdev2/jars/$2"},
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment2/icpdev2/pkgformats/$1"}
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment2/groupId/artifactId/version/$2"},
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment2/groupId/artifactId/pkg/$1"}
         ],
     "publish": true
 }
