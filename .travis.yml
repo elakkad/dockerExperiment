@@ -38,7 +38,7 @@ after_success:
 #  on:
 #    tags: true
 
-# checking if bintray deployment deploys to opensource artifactory
+# checking if bintray deployment deploys to bintray
 deploy:
   user: "$BINTRAY_USER"
   provider: bintray
@@ -48,20 +48,21 @@ deploy:
 #  dry-run: "Optional. If true, skips sending requests to Bintray. Useful for testing your configuration"
   skip_cleanup: true
   overwrite: true
-#  on:
-#    repo: dockerExperiment/icpdev2
-#    tags: true
+  on:
+    repo: dockerExperiment/icpdev2
+    tags: true
 
 # checking if bintray deployment deploys to opensource artifactory
-deploy:
-  user: "$ARTIFACTORY_USER"
-  provider: bintray
-  file: ".artifactorydescriptor.json"
-  key: "$ARTIFACTORY_API_KEY"
+# doesnot work
+#deploy:
+#  user: "$ARTIFACTORY_USER"
+#  provider: bintray
+#  file: ".artifactorydescriptor.json"
+#  key: "$ARTIFACTORY_API_KEY"
 #  passphrase: "Optional. In case a passphrase is configured on Bintray and GPG signing is used"
 #  dry-run: "Optional. If true, skips sending requests to Bintray. Useful for testing your configuration"
-  skip_cleanup: true
-  overwrite: true
+#  skip_cleanup: true
+#  overwrite: true
 #  on:
 #    repo: dockerExperiment/icpdev2
 #    tags: true  
