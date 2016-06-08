@@ -31,11 +31,11 @@
 
     "files":
         [
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment4/groupId/artifactId/version/$1",
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "folder1/groupId/artifactId/pkg/$1",
             "matrixParams": {
         "override": 1 }
         },
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment3/groupId/artifactId/pkg/$1",
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "folder2/groupId/artifactId/pkg/$1",
              "matrixParams": {
         "override": 1 }
         }
