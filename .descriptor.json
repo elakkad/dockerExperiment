@@ -1,8 +1,8 @@
 
 {
     "package": {
-        "name": "dockerExperiment",
-        "repo": "dockerExperiment",
+        "name": "dockerExperiment2",
+        "repo": "dockerExperiment2",
         "subject": "ahlam",
         "desc": "I was pushed completely automatically from travis ci",
         "website_url": "bintray.com",
