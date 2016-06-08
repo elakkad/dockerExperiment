@@ -32,8 +32,8 @@
 
     "files":
         [
-        {"includePattern": "build/libs/(.*\\.jar)", "uploadPattern": "groupId/artifactId/version/$2"},
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "groupId/artifactId/pkg/$1"}
+        {"includePattern": "build/libs/(.*\\.jar)", "uploadPattern": "dockerExperiment2/groupId/artifactId/version/$2"},
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment2/groupId/artifactId/pkg/$1"}
         ],
     "publish": true
 }
