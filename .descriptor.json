@@ -1,10 +1,10 @@
 
 {
     "package": {
-        "name": "dockerExperiment3",
-        "repo": "dockerExperiment3",
+        "name": "dockerExperiment2",
+        "repo": "dockerExperiment2",
         "subject": "ahlam",
-        "desc": "I was pushed completely automatically from travis ci",
+        "desc": "I was pushed completely automatically from travis ci travis-ci",
         "website_url": "bintray.com",
         "issue_tracker_url": "https://github.com/bintray/bintray-client-java/issues",
         "vcs_url": "https://github.com/bintray/bintray-client-java.git",
@@ -14,6 +14,9 @@
         "labels": ["cool", "awesome", "gorilla"],
         "public_download_numbers": false,
         "public_stats": false,
+        "attributes": [{"name": "att1", "values" : ["val1"], "type": "string"},
+                       {"name": "att2", "values" : [1, 2.2, 4], "type": "number"},
+                       {"name": "att5", "values" : ["2014-12-28T19:43:37+0100"], "type": "date"}]
     },
 
     "version": {
@@ -21,19 +24,16 @@
         "desc": "This is a version",
         "released": "SNAPSHOT",
         "vcs_tag": "",
+        "attributes": [{"name": "VerAtt1", "values" : ["VerVal1"], "type": "string"},
+                       {"name": "VerAtt2", "values" : [1, 3.3, 5], "type": "number"},
+                       {"name": "VerAtt3", "values" : ["2015-01-01T19:43:37+0100"], "type": "date"}],
         "gpgSign": false
     },
 
     "files":
         [
-        {"includePattern": "build/bin/(.*\\.jar)", "uploadPattern": "dockerExperiment3/groupId/artifactId/version/$2",
-        "matrixParams": {
-        "override": 1 }
-        },
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment3/groupId/artifactId/pkg/$1",
-        "matrixParams": {
-        "override": 1 }
-        }
+        {"includePattern": "build/libs/(.*\\.jar)", "uploadPattern": "dockerExperiment2/icpdev2/jars/$2"},
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment2/icpdev2/pkgformats/$1"}
         ],
     "publish": true
 }
