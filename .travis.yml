@@ -21,7 +21,7 @@ before_install:
 install: gradle clean check
 
 script: 
-- gradle assemble build
+- gradle assemble build myZip
 
 after_success:
   - docker --version 
