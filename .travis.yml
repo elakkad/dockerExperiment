@@ -65,6 +65,8 @@ deploy:
   deployment_group: travisci
   region: us-west-2
   skip_cleanup: true
+  on:
+    branch: release
 
 # checking if bintray deployment deploys to opensource artifactory
 # doesnot work
