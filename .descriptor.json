@@ -31,8 +31,8 @@
 
     "files":
         [
-        {"includePattern": "distributions/(.*)", "uploadPattern": "folder1/groupId/artifactId/pkg/$1",
-            "matrixParams": {
+        {"includePattern": "distributions/(.*)", "uploadPattern": "folder2/groupId/artifactId/pkg/$1",
+             "matrixParams": {
         "override": 1 }
         },
         {"includePattern": "build/libs/(.*)", "uploadPattern": "folder2/groupId/artifactId/pkg/$1",
