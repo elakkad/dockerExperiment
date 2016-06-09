@@ -1,4 +1,4 @@
 os: linux
 files:
-  - source: build/libs/dockerExperiment.jar
-    destination: /root/travisci/dockerExperiment.jar
+  - source: distributions/dockerExperiment.zip
+    destination: /root/travisci/dockerExperiment.zip
