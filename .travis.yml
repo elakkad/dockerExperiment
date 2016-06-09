@@ -60,9 +60,11 @@ deploy:
   access_key_id: "$AWS_ACCESS_KEY_ID"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   bucket: "S3 Bucket"
-  key: build/libs/dockerExperiment.jar
+  local_dir: build/libs/
+  key: dockerExperiment.jar
   application: travisciCodeDeploy
   deployment_group: travisci
+  bundle_type: jar
   region: us-west-2
   skip_cleanup: true
   on:
