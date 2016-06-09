@@ -62,6 +62,7 @@ deploy:
   key: build/libs/dockerExperiment.jar
   application: travisciCodeDeploy
   deployment_group: travisci
+  region: us-west-2
   skip_cleanup: true
 
 # checking if bintray deployment deploys to opensource artifactory
