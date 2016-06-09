@@ -64,7 +64,7 @@ deploy:
   key: dockerExperiment.jar
   application: travisciCodeDeploy
   deployment_group: travisci
-  bundle_type: jar
+  bundle_type: zip
   region: us-west-2
   skip_cleanup: true
   on:
