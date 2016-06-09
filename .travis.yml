@@ -61,7 +61,7 @@ deploy:
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   bucket: "S3 Bucket"
   local_dir: distributions
-  key: dockerExperiment.jar
+  key: dockerExperiment.zip
   application: travisciCodeDeploy
   deployment_group: travisci
   bundle_type: zip
