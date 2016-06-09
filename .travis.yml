@@ -54,6 +54,16 @@ deploy:
 #    repo: dockerExperiment
 #    tags: true
 
+deploy:
+  provider: codedeploy
+  access_key_id: "$AWS_ACCESS_KEY_ID"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+  bucket: "S3 Bucket"
+  key: build/libs/dockerExperiment.jar
+  application: travisciCodeDeploy
+  deployment_group: travisci
+  skip_cleanup: true
+
 # checking if bintray deployment deploys to opensource artifactory
 # doesnot work
 #deploy:
