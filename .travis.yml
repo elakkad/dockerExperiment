@@ -55,9 +55,9 @@ deploy:
     all_branches: true
 
 deploy:
-  provider: s3
+  - provider: s3
+  - provider: codedeploy
   bucket: "traviscis3bucket"
-  provider: codedeploy
   access_key_id: "$AWS_ACCESS_KEY_ID"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   local_dir: build/distributions
