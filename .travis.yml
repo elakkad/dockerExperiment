@@ -59,7 +59,7 @@ deploy:
   provider: codedeploy
   access_key_id: "$AWS_ACCESS_KEY_ID"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-  bucket: "S3 Bucket"
+  bucket: "traviscis3bucket"
   local_dir: distributions
   key: dockerExperiment.zip
   application: travisciCodeDeploy
