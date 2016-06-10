@@ -35,14 +35,7 @@
              "matrixParams": {
         "override": 1 }
         },
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "folderbuildlibs/groupId/artifactId/pkg/$1",
-             "matrixParams": {
-        "override": 1 }
-        },
-        {"includePattern": "build/distributions/(.*)", "uploadPattern": "folder3distro/groupId/artifactId/pkg/$1",
-             "matrixParams": {
-        "override": 1 },
-        {"includePattern": "build/distributions(.*)*/(.*\\.zip)"", "uploadPattern": "folder4zip/groupId/artifactId/pkg/$1",
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "folder2/groupId/artifactId/pkg/$1",
              "matrixParams": {
         "override": 1 }
         }
