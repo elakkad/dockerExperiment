@@ -1,4 +1,4 @@
 os: linux
 files:
-  - source: distributions/dockerExperiment.zip
-    destination: /root/travisci/dockerExperiment.zip
+  - source: icpweb/dockerExperiment.zip
+    destination: /root/dockerExperiment.zip
