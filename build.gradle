@@ -8,6 +8,9 @@ jar {
 
 task copyTask(type: Copy) {
    from 'appspec.yml'
+   from 'change_permissions'
+   from 'check_on_processes'
+   from 'run_java_minus_jar'
    into 'build/libs/'
 }
 
