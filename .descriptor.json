@@ -31,11 +31,18 @@
 
     "files":
         [
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "buildlibs/groupId/artifactId/pkg/$1",
+        {"includePattern": "distributions/(.*)", "uploadPattern": "folderDistro/groupId/artifactId/pkg/$1",
              "matrixParams": {
         "override": 1 }
         },
-        {"includePattern": "build/distributions/(.*)", "uploadPattern": "distros/groupId/artifactId/pkg/$1",
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "folderbuildlibs/groupId/artifactId/pkg/$1",
+             "matrixParams": {
+        "override": 1 }
+        },
+        {"includePattern": "build/distributions/(.*)", "uploadPattern": "folder3distro/groupId/artifactId/pkg/$1",
+             "matrixParams": {
+        "override": 1 },
+        {"includePattern": "build/distributions(.*)*/(.*\\.zip)"", "uploadPattern": "folder4zip/groupId/artifactId/pkg/$1",
              "matrixParams": {
         "override": 1 }
         }
