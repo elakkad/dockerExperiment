@@ -35,7 +35,7 @@
              "matrixParams": {
         "override": 1 }
         },
-        {"includePattern": "distributions/(.*)", "uploadPattern": "distros/groupId/artifactId/pkg/$1",
+        {"includePattern": "build/distributions/(.*)", "uploadPattern": "distros/groupId/artifactId/pkg/$1",
              "matrixParams": {
         "override": 1 }
         }
