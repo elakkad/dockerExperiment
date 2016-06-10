@@ -60,7 +60,7 @@ deploy:
   access_key_id: "$AWS_ACCESS_KEY_ID"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   bucket: "traviscis3bucket"
-  local_dir: distributions
+  local_dir: build/distributions
   key: dockerExperiment.zip
   application: travisciCodeDeploy
   deployment_group: travisci
