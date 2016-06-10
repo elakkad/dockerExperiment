@@ -1,1 +1,1 @@
-java -jar /var/deployments/dockerExperiment.jar
+java -jar /var/deployments/dockerExperiment.jar &
