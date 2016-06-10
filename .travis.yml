@@ -60,8 +60,8 @@ deploy:
   provider: codedeploy
   access_key_id: "$AWS_ACCESS_KEY_ID"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-  local_dir: icpweb
-  key: dockerExperiment.zip
+  local_dir: build/distributions
+  key: icpweb/dockerExperiment.zip
   application: travisciCodeDeploy
   deployment_group: travisci
   bundle_type: zip
