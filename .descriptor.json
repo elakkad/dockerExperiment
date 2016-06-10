@@ -31,11 +31,11 @@
 
     "files":
         [
-        {"includePattern": "distributions/(.*)", "uploadPattern": "folderDistro/groupId/artifactId/pkg/$1",
-             "matrixParams": {
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment2/groupId/artifactId/version/$1",
+            "matrixParams": {
         "override": 1 }
         },
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "folder2/groupId/artifactId/pkg/$1",
+        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment2/groupId/artifactId/pkg/$1",
              "matrixParams": {
         "override": 1 }
         }
