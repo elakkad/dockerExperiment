@@ -2,3 +2,21 @@ os: linux
 files:
   - source: icpweb/dockerExperiment.zip
     destination: /root/dockerExperiment.zip
+
+version: 0.0
+os: linux
+files:
+  - source: /dockerExperiment.jar
+    destination: /var/deployments/
+hooks:
+  BeforeInstall:
+    - location: scripts/change_permissions
+      timeout: 300
+      runas: root
+    - location: scripts/run_java_minus_jar
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/check_on_processes
+      timeout: 300
+      runas: root
