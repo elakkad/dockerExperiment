@@ -52,7 +52,7 @@ deploy:
   overwrite: true
   on:
 #    repo: dockerExperiment
-    tags: false
+    all_branches: true
 
 deploy:
   provider: s3
