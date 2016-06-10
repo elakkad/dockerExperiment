@@ -35,7 +35,7 @@
             "matrixParams": {
         "override": 1 }
         },
-        {"includePattern": "build/libs/(.*)", "uploadPattern": "dockerExperiment3/groupId/artifactId/pkg/$1",
+        {"includePattern": "build/distributions/(.*)", "uploadPattern": "dockerExperiment3/groupId/artifactId/pkg/$1",
              "matrixParams": {
         "override": 1 }
         }
