@@ -1,11 +1,18 @@
 apply plugin: 'java'
- 
+
 jar {
     manifest {
         attributes 'Main-Class': 'net.petrikainulainen.gradle.HelloWorld'
     }
-    
+}
+
+task copyTask(type: Copy) {
+   from 'appspec.yml'
+   into 'build/libs/'
+}
+
  task myZip(type: Zip) {
     from 'build/libs/'
  }
-}
+
+myZip.dependsOn copyTask
