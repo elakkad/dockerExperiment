@@ -50,9 +50,9 @@ deploy:
 #  dry-run: "Optional. If true, skips sending requests to Bintray. Useful for testing your configuration"
   skip_cleanup: true
   overwrite: true
-#  on:
+  on:
 #    repo: dockerExperiment
-#    tags: true
+    tags: false
 
 deploy:
   provider: s3
