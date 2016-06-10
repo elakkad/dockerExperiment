@@ -54,21 +54,21 @@ deploy:
 #    repo: dockerExperiment
     all_branches: true
 
-deploy:
-  provider: s3
-  provider: codedeploy
-  access_key_id: "$AWS_ACCESS_KEY_ID"
-  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-  bucket: "traviscis3bucket"
-  local_dir: build/distributions
-  key: dockerExperiment.zip
-  application: travisciCodeDeploy
-  deployment_group: travisci
-  bundle_type: zip
-  region: us-west-2
-  skip_cleanup: true
-  on:
-    tags: true
+#deploy:
+#  provider: s3
+#  provider: codedeploy
+#  access_key_id: "$AWS_ACCESS_KEY_ID"
+#  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+#  bucket: "traviscis3bucket"
+#  local_dir: build/distributions
+#  key: dockerExperiment.zip
+#  application: travisciCodeDeploy
+#  deployment_group: travisci
+#  bundle_type: zip
+#  region: us-west-2
+#  skip_cleanup: true
+#  on:
+#    tags: true
 
 # checking if bintray deployment deploys to opensource artifactory
 # doesnot work
