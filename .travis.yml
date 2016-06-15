@@ -41,8 +41,7 @@ after_success:
 #    tags: true
 
 # checking if bintray deployment deploys to bintray
-before_deploy:
-  - deploy:
+deploy:
   user: "$BINTRAY_USER"
   provider: bintray
   file: ".descriptor.json"
@@ -65,8 +64,7 @@ deploy:
   on:
     tags: true
 
-after_deploy:
-  - deploy
+deploy:
   provider: codedeploy
   bucket: "traviscis3bucket"
   access_key_id: "$AWS_ACCESS_KEY_ID"
