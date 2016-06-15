@@ -88,6 +88,8 @@ deploy:
     on:
       tags: true
     bucket: traviscis3bucket
+    region: us-west-2
+    wait-until-deploy: true
   - provider: codedeploy
     access_key_id: "$AWS_ACCESS_KEY_ID"
     secret_access_key: "$AWS_SECRET_ACCESS_KEY"    
@@ -96,6 +98,8 @@ deploy:
     bundle_type: zip
     application: travisciCodeDeploy
     deployment_group: travisci
+    region: us-west-2
+    wait-until-deploy: true
     on: 
        tags: true
 
