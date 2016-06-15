@@ -1,12 +1,7 @@
-os: linux
-files:
-  - source: icpweb/dockerExperiment.zip
-    destination: /root/dockerExperiment.zip
-
 version: 0.0
 os: linux
 files:
-  - source: /dockerExperiment.jar
+  - source: /icpweb/dockerExperiment.jar
     destination: /var/deployments/
 hooks:
   BeforeInstall:
