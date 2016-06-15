@@ -54,30 +54,50 @@ deploy:
 #    repo: dockerExperiment
     all_branches: true
 
-deploy:
-  provider: s3
-  bucket: traviscis3bucket
-  access_key_id: "$AWS_ACCESS_KEY_ID"
-  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-  local_dir: build/distributions
-  skip_cleanup: true
-  on:
-    tags: true
+#deploy:
+#  provider: s3
+#  bucket: traviscis3bucket
+#  access_key_id: "$AWS_ACCESS_KEY_ID"
+#  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+#  local_dir: build/distributions
+#  skip_cleanup: true
+#  on:
+#    tags: true
+
+#deploy:
+#  provider: codedeploy
+#  bucket: traviscis3bucket
+#  access_key_id: "$AWS_ACCESS_KEY_ID"
+#  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+#  local_dir: build/distributions
+#  key: icpweb/dockerExperiment.zip
+#  application: travisciCodeDeploy
+#  deployment_group: travisci
+#  bundle_type: zip
+#  region: us-west-2
+#  skip_cleanup: true
+#  on:
+#    tags: true
 
 deploy:
-  provider: codedeploy
-  bucket: traviscis3bucket
-  access_key_id: "$AWS_ACCESS_KEY_ID"
-  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-  local_dir: build/distributions
-  key: icpweb/dockerExperiment.zip
-  application: travisciCodeDeploy
-  deployment_group: travisci
-  bundle_type: zip
-  region: us-west-2
-  skip_cleanup: true
-  on:
-    tags: true
+  - provider: s3
+    access_key_id: "$AWS_ACCESS_KEY_ID"
+    secret_access_key: "$AWS_SECRET_ACCESS_KEY"    
+    local_dir: build/distributions
+    skip_cleanup: true
+    on:
+      tags: true
+    bucket: traviscis3bucket
+  - provider: codedeploy
+    access_key_id: "$AWS_ACCESS_KEY_ID"
+    secret_access_key: "$AWS_SECRET_ACCESS_KEY"    
+    bucket: traviscis3bucket
+    key: icpweb/dockerExperiment.zip
+    bundle_type: zip
+    application: travisciCodeDeploy
+    deployment_group: travisci
+    on: 
+       tags: true
 
 # checking if bintray deployment deploys to opensource artifactory
 # doesnot work
