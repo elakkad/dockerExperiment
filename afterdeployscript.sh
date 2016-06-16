@@ -1,2 +1,2 @@
 #!/bin/bash
-unzip /root/travisci/dockerExperiment.zip -d /root/travisci
+unzip /root/travisci/dockerExperiment.zip -d /var/deployments/
