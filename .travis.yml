@@ -41,46 +41,18 @@ after_success:
 #  on:
 #    tags: true
 
-# checking if bintray deployment deploys to bintray
+# bintray deployment deploys to bintray
+# deploy to amazon s3 bucket
+# deploy to amazon instance from s3 bucket
 deploy:
-  user: "$BINTRAY_USER"
-  provider: bintray
-  file: ".descriptor.json"
-  key: "$BINTRAY_API_KEY"
-#  passphrase: "Optional. In case a passphrase is configured on Bintray and GPG signing is used"
-#  dry-run: "Optional. If true, skips sending requests to Bintray. Useful for testing your configuration"
-  skip_cleanup: true
-  overwrite: true
-  on:
-#    repo: dockerExperiment
+  - provider: bintray
+    user: "$BINTRAY_USER"
+    file: ".descriptor.json"
+    key: "$BINTRAY_API_KEY"
+    skip_cleanup: true
+    overwrite: true
+    on:
     all_branches: true
-
-#deploy:
-#  provider: s3
-#  bucket: traviscis3bucket
-#  access_key_id: "$AWS_ACCESS_KEY_ID"
-#  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-#  local_dir: build/distributions
-#  skip_cleanup: true
-#  on:
-#    tags: true
-
-#deploy:
-#  provider: codedeploy
-#  bucket: traviscis3bucket
-#  access_key_id: "$AWS_ACCESS_KEY_ID"
-#  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-#  local_dir: build/distributions
-#  key: icpweb/dockerExperiment.zip
-#  application: travisciCodeDeploy
-#  deployment_group: travisci
-#  bundle_type: zip
-#  region: us-west-2
-#  skip_cleanup: true
-#  on:
-#    tags: true
-
-deploy:
   - provider: s3
     access_key_id: "$AWS_ACCESS_KEY_ID"
     secret_access_key: "$AWS_SECRET_ACCESS_KEY"    
@@ -103,21 +75,6 @@ deploy:
     wait-until-deploy: true
     on: 
        tags: true
-
-# checking if bintray deployment deploys to opensource artifactory
-# doesnot work
-#deploy:
-#  user: "$ARTIFACTORY_USER"
-#  provider: bintray
-#  file: ".artifactorydescriptor.json"
-#  key: "$ARTIFACTORY_API_KEY"
-#  passphrase: "Optional. In case a passphrase is configured on Bintray and GPG signing is used"
-#  dry-run: "Optional. If true, skips sending requests to Bintray. Useful for testing your configuration"
-#  skip_cleanup: true
-#  overwrite: true
-#  on:
-#    repo: dockerExperiment/icpdev2
-#    tags: true  
   
 env:
    global:
