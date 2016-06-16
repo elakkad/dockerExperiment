@@ -1,1 +1,1 @@
-chmod +x /var/deployments/dockerExperiment.jar
+ls -al /var/deployments/
