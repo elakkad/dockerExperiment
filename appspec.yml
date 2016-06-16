@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /icpweb/dockerExperiment.jar
+  - source: /
     destination: /var/deployments/
 hooks:
   BeforeInstall:
