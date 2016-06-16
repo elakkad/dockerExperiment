@@ -94,7 +94,7 @@ deploy:
     access_key_id: "$AWS_ACCESS_KEY_ID"
     secret_access_key: "$AWS_SECRET_ACCESS_KEY"    
     bucket: traviscis3bucket
-    key: icpweb/dockerExperiment.zip
+    key: dockerExperiment.zip
     bundle_type: zip
     application: travisciCodeDeploy
     deployment_group: travisci
