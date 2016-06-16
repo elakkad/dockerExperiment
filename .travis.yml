@@ -4,7 +4,7 @@
 # https://docs.travis-ci.com/user/deployment/bintray
 # artifactory
 # bintray overwrite/write
-#  combined revision draft uploaded to amazon s3 bucket
+#  combined revision draft uploaded to amazon s3 bucket and bintray
 
 sudo: required
 
