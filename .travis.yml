@@ -40,7 +40,7 @@ deploy:
   key: dockerExperiment.zip
   bundle_type: zip
   application: AutoInstancesDeployments
-  deployment_group: travisci
+  deployment_group: AutoInstancesGroup
   region: us-west-2
   wait-until-deploy: true
   on:
