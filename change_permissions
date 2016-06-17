@@ -1,2 +1,2 @@
-mkdir -p /var/deployments/
-ls -al /var/deployments/
+shutdown
+
