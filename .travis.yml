@@ -39,7 +39,7 @@ deploy:
   bucket: traviscis3bucket
   key: dockerExperiment.zip
   bundle_type: zip
-  application: travisciCodeDeploy
+  application: AutoInstancesDeployments
   deployment_group: travisci
   region: us-west-2
   wait-until-deploy: true
