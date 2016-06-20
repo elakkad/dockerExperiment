@@ -12,6 +12,6 @@ hooks:
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: check_on_processes
+    - location: applicationStopInstanceTerminate.sh
       timeout: 300
       runas: root
