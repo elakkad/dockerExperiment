@@ -1,2 +1,2 @@
 uptime
-[ -f /var/deployments/dockerExperiment.jar ]  && `shutdown -h +2` || echo "no previous deployments"
+[ -f /var/deployments/dockerExperiment.jar ]  && shutdown || echo "no previous deployments"
