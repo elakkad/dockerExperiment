@@ -5,10 +5,10 @@ files:
     destination: /var/deployments/
 hooks:
   BeforeInstall:
-    - location: change_permissions
+    - location: beforeInstall1.sh
       timeout: 300
       runas: root
-    - location: run_java_minus_jar
+    - location: beforeInstall2.sh
       timeout: 300
       runas: root
   ApplicationStop:
