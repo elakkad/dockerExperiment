@@ -4,6 +4,10 @@ files:
   - source: /
     destination: /var/deployments/
 hooks:
+  ApplicationStop:
+    - location: applicationStopInstanceTerminate.sh
+      timeout: 300
+      runas: root
   BeforeInstall:
     - location: beforeInstall1.sh
       timeout: 300
@@ -11,7 +15,15 @@ hooks:
     - location: beforeInstall2.sh
       timeout: 300
       runas: root
-  ApplicationStop:
-    - location: applicationStopInstanceTerminate.sh
+  AfterInstall:
+    - location: afterInstall.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: appStart.sh
+      timeout: 300
+      runas: root
+ValidateService:
+    - location: validateApp.sh
       timeout: 300
       runas: root
