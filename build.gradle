@@ -8,9 +8,12 @@ jar {
 
 task copyTask(type: Copy) {
    from 'appspec.yml'
-   from 'change_permissions'
-   from 'check_on_processes'
-   from 'run_java_minus_jar'
+   from 'applicationStopInstanceTerminate.sh'
+   from 'beforeInstall1.sh'
+   from 'beforeInstall2.sh'
+   from 'afterInstall.sh'
+   from 'appStart.sh'
+   from 'validateApp.sh'
    into 'build/libs/'
 }
 
