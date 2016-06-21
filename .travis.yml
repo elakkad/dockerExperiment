@@ -39,8 +39,8 @@ deploy:
   bucket: traviscis3bucket
   key: dockerExperiment.zip
   bundle_type: zip
-  application: AutoInstancesDeployments
-  deployment_group: AutoInstancesGroup
+  application: TravisCICodeDeployApp
+  deployment_group: TravisCIAutoScalingGroupName
   region: us-west-2
   wait-until-deploy: true
   on:
