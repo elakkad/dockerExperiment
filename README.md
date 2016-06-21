@@ -5,7 +5,7 @@
 1. ApplicationStop
 2. DownloadBundle
 3. BeforeInstall
-4. Install
+4. Install - reserved
 5. AfterInstall
 6. ApplicationStart
 7. ValidateService
