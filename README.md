@@ -12,3 +12,6 @@
 
 # aws elastic beanstalk
 http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_image.html
+
+# travis automatically installs dpl
+https://github.com/travis-ci/dpl
