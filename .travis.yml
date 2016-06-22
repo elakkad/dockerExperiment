@@ -55,7 +55,7 @@ deploy:
   skip_cleanup: true
   overwrite: true
   on:
-    repo: elakkad/dockertest
+    repo: elakkad/dockertest:latest
     all_branches: true
 env:
   global:
