@@ -1,23 +1,16 @@
 {
-
  "AWSEBDockerrunVersion": "1",
-
  "Authentication": {
-
    "Bucket": "eb-travisci-docker-bucket",
-
    "Key": ".dockercfg"
-
  },
-
+ "Image": {
+    "Name": "docker pull elakkad/dockertest",
+    "Update": "true"
+ },
  "Ports": [
-
    {
-
-     "ContainerPort": "8761"
-
+     "ContainerPort": "8080"
    }
-
  ]
-
 }
