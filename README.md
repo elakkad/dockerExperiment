@@ -9,3 +9,6 @@
 5. AfterInstall
 6. ApplicationStart
 7. ValidateService
+
+# aws elastic beanstalk
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_image.html
