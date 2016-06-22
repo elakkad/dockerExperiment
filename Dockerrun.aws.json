@@ -5,7 +5,7 @@
    "Key": ".dockercfg"
  },
  "Image": {
-    "Name": "docker pull elakkad/dockertest",
+    "Name": "elakkad/dockertest",
     "Update": "true"
  },
  "Ports": [
