@@ -1,1 +1,23 @@
+{
 
+ "AWSEBDockerrunVersion": "1",
+
+ "Authentication": {
+
+   "Bucket": "eb-travisci-docker-bucket",
+
+   "Key": ".dockercfg"
+
+ },
+
+ "Ports": [
+
+   {
+
+     "ContainerPort": "8761"
+
+   }
+
+ ]
+
+}
