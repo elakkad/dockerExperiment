@@ -1,11 +1,11 @@
 {
  "AWSEBDockerrunVersion": "1",
  "Authentication": {
-   "Bucket": "eb-travisci-docker-bucket",
+   "Bucket": "elasticbeanstalk-us-west-2-085326272648",
    "Key": ".dockercfg"
  },
  "Image": {
-    "Name": "elakkad/dockertest",
+    "Name": "index.docker.io/elakkad/dockertest",
     "Update": "true"
  },
  "Ports": [
@@ -13,5 +13,5 @@
      "ContainerPort": "8080"
    }
  ],
-  "Logging": "/var/log/"
+ "Logging": "/var/log/deploying"
 }
