@@ -15,8 +15,8 @@
  ],
   "Volumes": [
     {
-      "HostDirectory": "/var/app/ebtravisci",
-      "ContainerDirectory": "/etc/ebtravisci"
+      "HostDirectory": "/root/deployments3/",
+      "ContainerDirectory": "/root/deployments3/"
     }
   ],
  "Logging": "/var/log/deploying"
