@@ -14,6 +14,7 @@ after_success:
 - docker build -t elakkad/dockertest:latest .
 - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 - docker push elakkad/dockertest:latest
+- zip -r ebTravisCI.zip *
 deploy:
 - provider: bintray
   user: "$BINTRAY_USER"
@@ -46,7 +47,7 @@ deploy:
   on:
     tags: true
 - provider: elasticbeanstalk
-  zip_file: build/distributions/dockerExperiment.zip
+  zip_file: ebTravisCI.zip
   access_key_id: "$AWS_ACCESS_KEY_ID"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   region: us-west-2
