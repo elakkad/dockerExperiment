@@ -10,4 +10,4 @@ RUN yum -y update; yum clean all; yum -y install vim wget unzip zip lsof curl ne
 
 EXPOSE 8761
 
-CMD ["ps","-ef"]
+CMD ["vmstat","1"]
