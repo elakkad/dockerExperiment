@@ -50,9 +50,9 @@ deploy:
   access_key_id: "$AWS_ACCESS_KEY_ID"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   region: us-west-2
-  app: eb-eb-docker-travisci-eb-eb
-  env: ebEbDockerTravisciE-env
-  bucket_name: eb-travisci-docker-bucket
+  app: "My First Elastic Beanstalk Application"
+  env: Default-Environment
+  bucket_name: elasticbeanstalk-us-west-2-085326272648
   skip_cleanup: true
   overwrite: true
   on:
