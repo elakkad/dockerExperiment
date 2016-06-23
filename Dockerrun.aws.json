@@ -13,5 +13,11 @@
      "ContainerPort": "8080"
    }
  ],
+  "Volumes": [
+    {
+      "HostDirectory": "/var/app/ebtravisci",
+      "ContainerDirectory": "/etc/ebtravisci"
+    }
+  ],
  "Logging": "/var/log/deploying"
 }
