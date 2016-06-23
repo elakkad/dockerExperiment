@@ -8,4 +8,6 @@ ADD build/libs/dockerExperiment.jar /root/deployments3/dockerExperiment.jar
 # Install minimal packages
 RUN yum -y update; yum clean all; yum -y install vim wget unzip zip lsof curl net-tools
 
-EXPOSE 80
+EXPOSE 8080
+
+ENTRYPOINT ["/bin/bash"]
