@@ -15,9 +15,13 @@ http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_image
 
 # travis automatically installs dpl
 https://github.com/travis-ci/dpl
-https://github.com/travis-ci/dpl#elastic-beanstalk
-Elastic Beanstalk:
 
+
+
+# https://github.com/travis-ci/dpl#elastic-beanstalk
+
+---------------------------------------------------------
+Elastic Beanstalk:
 Options:
 
 access-key-id: AWS Access Key ID. Can be obtained from here.
@@ -29,3 +33,10 @@ zip_file: The zip file that you want to deploy. Note: you also need to use the s
 bucket_name: Bucket name to upload app to.
 bucket_path: Location within Bucket to upload app to.
 only_create_app_version: only create the app version, don't actually deploy it.
+
+
+Environment variables:
+
+ELASTIC_BEANSTALK_ENV: Elastic Beanstalk environment name which will be updated. Is only used if env option is omitted.
+ELASTIC_BEANSTALK_LABEL: Label name of the new version.
+ELASTIC_BEANSTALK_DESCRIPTION: Description of the new version. Defaults to the last commit message.
