@@ -15,7 +15,6 @@ task copyTask(type: Copy) {
    from 'appStart.sh'
    from 'validateApp.sh'
    from 'Dockerrun.aws.json'
-   from 'Dockerfile'
    into 'build/libs/'
 }
 
