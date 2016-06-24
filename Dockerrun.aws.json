@@ -19,5 +19,17 @@
       "ContainerDirectory": "/root/deployments3/"
     }
   ],
+  "containerDefinitions": [
+    {
+      "name": "registry",
+      "image": "elakkad/dockertest",
+      "essential": true,
+      "memory": 512,
+      "portMappings": [
+        {
+          "hostPort": 5000,
+          "containerPort": 8761
+        }
+      ],
  "Logging": "/var/log/deploying"
 }
