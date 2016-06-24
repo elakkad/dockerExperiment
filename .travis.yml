@@ -52,8 +52,8 @@ deploy:
   access_key_id: "$AWS_ACCESS_KEY_ID"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   region: us-west-2
-  app: "My First Elastic Beanstalk Application"
-  env: Default-Environment
+  app:  bbdockertest
+  env:  bbdockertest-env
   bucket_name: elasticbeanstalk-us-west-2-085326272648
   skip_cleanup: true
   overwrite: true
