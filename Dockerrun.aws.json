@@ -1,35 +1,25 @@
 {
- "AWSEBDockerrunVersion": "2",
- "Authentication": {
-   "Bucket": "elasticbeanstalk-us-west-2-085326272648",
-   "Key": ".dockercfg"
- },
- "Image": {
-    "Name": "index.docker.io/elakkad/dockertest",
-    "Update": "true"
- },
- "Ports": [
-   {
-     "ContainerPort": "8761"
-   }
- ],
-  "Volumes": [
-    {
-      "HostDirectory": "/root/deployments3/",
-      "ContainerDirectory": "/root/deployments3/"
-    }
-  ],
-  "containerDefinitions": [
-    {
-      "name": "registry",
-      "image": "elakkad/dockertest:latest",
-      "essential": true,
-      "memory": 128,
-      "portMappings": [
-        {
-          "hostPort": 8760,
-          "containerPort": 8760
-        }
-      ],
- "Logging": "/var/log/deploying"
+	"AWSEBDockerrunVersion": "1",
+	"Authentication": {
+		"Bucket": "elasticbeanstalk-us-west-2-085326272648",
+		"Key": ".dockercfg"
+	},
+	"Image": {
+		"Name": "index.docker.io/elakkad/dockertest",
+		"Update": "true"
+	},
+	"Ports": [{
+		"ContainerPort": "8761"
+	}],
+	"Volumes": [{
+		"HostDirectory": "/root/deployments3/",
+		"ContainerDirectory": "/root/deployments3/"
+	}],
+	"containerDefinitions": [{
+		"name": "registry",
+		"image": "elakkad/dockertest:latest",
+		"essential": true,
+		"memory": 128
+	}],
+	"Logging": "/var/log/deploying"
 }
