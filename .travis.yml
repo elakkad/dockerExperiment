@@ -14,7 +14,8 @@ after_success:
 - docker build -t elakkad/dockertest:latest .
 - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 - docker push elakkad/dockertest:latest
-- zip -r ebTravisCI.zip Dockerrun.aws.json
+#- zip -r ebTravisCI.zip *
+- zip ebTravisCIdockerrun.zip Dockerrun.aws.json
 deploy:
 - provider: bintray
   user: "$BINTRAY_USER"
