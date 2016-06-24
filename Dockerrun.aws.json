@@ -22,13 +22,13 @@
   "containerDefinitions": [
     {
       "name": "registry",
-      "image": "elakkad/dockertest",
+      "image": "elakkad/dockertest:latest",
       "essential": true,
-      "memory": 512,
+      "memory": 128,
       "portMappings": [
         {
-          "hostPort": 5000,
-          "containerPort": 8761
+          "hostPort": 8760,
+          "containerPort": 8760
         }
       ],
  "Logging": "/var/log/deploying"
